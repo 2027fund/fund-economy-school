@@ -10,5 +10,6 @@
 | 학년별 내용요소 | [/elements/](https://dochon1.github.io/fund-economy-school/elements/) |
 | 경제 내용 계열성 | [/sequence/](https://dochon1.github.io/fund-economy-school/sequence/) |
 | 학년별 내용체계표 | [/framework/](https://dochon1.github.io/fund-economy-school/framework/) |
+| 3학년 과정안 패키지 | [/lesson3/](https://dochon1.github.io/fund-economy-school/lesson3/) |
 
 공통 스타일은 `assets/style.css`에 있습니다.
