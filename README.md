@@ -1,0 +1,14 @@
+# 앎과 삶을 잇는 F.U.N.D. 경제학교
+
+경제교육 연구학교 운영 계획서에 QR코드로 연결되는 교육과정 자료 웹페이지입니다.
+
+- 사이트: https://dochon1.github.io/fund-economy-school/
+
+| 탭 | 주소 |
+| --- | --- |
+| 학년군별 경제 성취기준 | [/standards/](https://dochon1.github.io/fund-economy-school/standards/) |
+| 학년별 내용요소 | [/elements/](https://dochon1.github.io/fund-economy-school/elements/) |
+| 경제 내용 계열성 | [/sequence/](https://dochon1.github.io/fund-economy-school/sequence/) |
+| 학년별 내용체계표 | [/framework/](https://dochon1.github.io/fund-economy-school/framework/) |
+
+공통 스타일은 `assets/style.css`에 있습니다.
