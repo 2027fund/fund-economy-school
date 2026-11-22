@@ -26,9 +26,8 @@ a{color:inherit}
 .header-top{padding:22px 20px 18px}
 .brand{display:block;text-decoration:none}
 .eyebrow{display:inline-block;font-size:12.5px;font-weight:600;letter-spacing:.08em;color:#C7D0DE;margin-bottom:6px}
-.title{display:block;line-height:1.3}
-.title .t1{display:block;font-size:26px;font-weight:800;letter-spacing:-.01em}
-.title .t2,.title .t3{display:block;font-size:17px;font-weight:500;color:#DCE3EE}
+.title{display:block;font-size:26px;font-weight:800;line-height:1.35;letter-spacing:-.01em;color:#fff}
+.title .t1,.title .t2,.title .t3{display:inline}
 .fund{color:var(--gold);font-weight:900;letter-spacing:.02em}
 
 .tabs{background:#0F1A2B;border-top:1px solid rgba(255,255,255,.08)}
@@ -143,8 +142,7 @@ td.mk{text-align:center;vertical-align:middle;border-left:1px solid var(--line-2
   .header-top{background:var(--ink);color:#fff;max-width:none;padding:18px 16px 14px}
   .tabs{position:sticky;top:0;z-index:10}
   .wrap{padding-left:16px;padding-right:16px}
-  .title .t1{font-size:21px}
-  .title .t2,.title .t3{display:block;font-size:14px}
+  .title{font-size:20px}
   .tab{min-height:48px;padding:0 12px;font-size:14.5px}
   main.wrap{padding-top:26px;padding-bottom:48px}
   .page-head h1,.hero-title{font-size:25px}
@@ -155,7 +153,8 @@ td.mk{text-align:center;vertical-align:middle;border-left:1px solid var(--line-2
 @media print{
   body{background:#fff}
   .site-header{position:static;background:#fff;color:var(--ink)}
-  .title .t2,.title .t3,.eyebrow{color:var(--ink-2)}
+  .title{color:var(--ink)}
+  .eyebrow{color:var(--ink-2)}
   .tabs,.jump,.site-footer{display:none}
   .table-box{overflow:visible;border-color:#bbb}
   .block{break-inside:avoid}
