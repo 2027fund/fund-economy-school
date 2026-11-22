@@ -11,5 +11,7 @@
 | 경제 내용 계열성 | [/sequence/](https://dochon1.github.io/fund-economy-school/sequence/) |
 | 학년별 내용체계표 | [/framework/](https://dochon1.github.io/fund-economy-school/framework/) |
 | 3학년 과정안 패키지 | [/lesson3/](https://dochon1.github.io/fund-economy-school/lesson3/) |
+| 2학년 노동 프로젝트 | [/grade2-labor/](https://dochon1.github.io/fund-economy-school/grade2-labor/) |
+| 4학년 금융 프로젝트 | [/grade4-finance/](https://dochon1.github.io/fund-economy-school/grade4-finance/) |
 
 공통 스타일은 `assets/style.css`에 있습니다.
