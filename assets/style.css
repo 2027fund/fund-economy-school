@@ -26,8 +26,9 @@ a{color:inherit}
 .header-top{padding:22px 20px 18px}
 .brand{display:block;text-decoration:none}
 .eyebrow{display:inline-block;font-size:12.5px;font-weight:600;letter-spacing:.08em;color:#C7D0DE;margin-bottom:6px}
-.title{display:block;font-size:26px;font-weight:800;line-height:1.35;letter-spacing:-.01em;color:#fff}
-.title .t1,.title .t2,.title .t3{display:inline}
+.title{display:block;line-height:1.3}
+.title .t1{display:block;font-size:26px;font-weight:800;letter-spacing:-.01em}
+.title .t2,.title .t3{display:block;font-size:17px;font-weight:500;color:#DCE3EE}
 .fund{color:var(--gold);font-weight:900;letter-spacing:.02em}
 
 .tabs{background:#0F1A2B;border-top:1px solid rgba(255,255,255,.08)}
@@ -135,26 +136,109 @@ td.mk{text-align:center;vertical-align:middle;border-left:1px solid var(--line-2
 
 .site-footer{border-top:1px solid var(--line);padding:22px 0;color:var(--muted);font-size:13.5px}
 
-/* responsive */
-@media (max-width:720px){
-  html{scroll-padding-top:120px}
+/* responsive : tablet / phone (portrait) */
+@media screen and (max-width:720px){
+  html{scroll-padding-top:112px}
+  body{font-size:15.5px}
   .site-header{display:contents}
-  .header-top{background:var(--ink);color:#fff;max-width:none;padding:18px 16px 14px}
-  .tabs{position:sticky;top:0;z-index:10}
+  .header-top{background:var(--ink);color:#fff;max-width:none;padding:16px 16px 14px}
   .wrap{padding-left:16px;padding-right:16px}
-  .title{font-size:20px}
-  .tab{min-height:48px;padding:0 12px;font-size:14.5px}
-  main.wrap{padding-top:26px;padding-bottom:48px}
+  .eyebrow{font-size:12px;margin-bottom:4px}
+  .title .t1{font-size:21px}
+  .title .t2,.title .t3{display:block;font-size:14px}
+
+  /* tabs: 2 x 2 grid so all four are visible without sideways scrolling */
+  .tabs{position:sticky;top:0;z-index:10;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+  .tabs-inner{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;padding-left:8px;padding-right:8px;overflow:visible}
+  .tab{min-height:46px;padding:6px 10px;gap:6px;font-size:13.5px;line-height:1.3;white-space:normal;border-bottom-width:3px}
+  .tab-no{font-size:11.5px}
+
+  main.wrap{padding-top:24px;padding-bottom:44px}
+  .page-head{margin-bottom:16px}
   .page-head h1,.hero-title{font-size:25px}
-  .cards{grid-template-columns:1fr}
+  .lead{font-size:15px}
+  .jump{gap:6px;margin-bottom:22px}
+  .jump a{min-height:40px;padding:0 14px;font-size:14px}
+  .block{margin-bottom:32px}
+  .block h2{font-size:19px}
+  .cards{grid-template-columns:1fr;gap:12px}
+  .card{min-height:0;padding:18px 18px 16px}
+  .card-title{font-size:19px}
   table{font-size:14.5px}
-  th,td{padding:10px 11px}
+  th,td{padding:10px 12px}
+
+  /* ---------- 01 성취기준: stacked list ---------- */
+  .t-standards{min-width:0}
+  .t-standards,.t-standards tbody,.t-standards tr,.t-standards th,.t-standards td{display:block;width:auto}
+  .t-standards colgroup,.t-standards thead{display:none}
+  .t-standards th.dom{text-align:left;padding:9px 14px;font-size:15px;border-right:0}
+  .t-standards td{padding:12px 14px}
+  .t-standards .code{display:block;margin:0 0 3px;font-size:13.5px}
+
+  /* ---------- 02 내용요소: one card per grade ---------- */
+  .t-elements{min-width:0}
+  .t-elements,.t-elements tbody,.t-elements tr,.t-elements th,.t-elements td{display:block;width:auto}
+  .t-elements thead{display:none}
+  .t-elements tbody tr+tr{border-top:1px solid var(--line)}
+  .t-elements tbody tr>*{border-bottom:1px solid var(--line-2)}
+  .t-elements tbody tr>td:last-child{border-bottom:0}
+  .t-elements th.grade{width:auto;padding:10px 14px;font-size:15.5px}
+  .t-elements td{display:grid;grid-template-columns:42px minmax(0,1fr);align-items:center;gap:8px;padding:9px 14px}
+  .t-elements td::before{font-size:13px;font-weight:800}
+  .t-elements td:nth-of-type(1)::before{content:"경제";color:var(--eco)}
+  .t-elements td:nth-of-type(2)::before{content:"금융";color:var(--fin)}
+  .t-elements td:nth-of-type(3)::before{content:"노동";color:var(--lab)}
+  .tag{padding:4px 10px;font-size:14px}
+
+  /* ---------- 03 계열성: subtopic rows with a 6-grade strip ---------- */
+  .t-sequence{min-width:0}
+  .t-sequence,.t-sequence tbody{display:block}
+  .t-sequence colgroup,.t-sequence thead{display:none}
+  .t-sequence tr{display:grid;grid-template-columns:repeat(6,minmax(0,1fr))}
+  .t-sequence th.topic{grid-column:1/-1;text-align:left;padding:9px 14px;font-size:15px;border-right:0}
+  .t-sequence tbody tr>th.subtopic{grid-column:1/-1;padding:10px 14px 2px;border-right:0;border-bottom:0;font-size:14.5px}
+  .t-sequence td.mk{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:2px;
+    min-height:50px;padding:4px 0 10px;border-left:0}
+  .t-sequence td.mk::before{font-size:11px;font-weight:600;color:var(--muted);line-height:1.4}
+  .t-sequence td.mk:nth-of-type(1)::before{content:"1학년"}
+  .t-sequence td.mk:nth-of-type(2)::before{content:"2학년"}
+  .t-sequence td.mk:nth-of-type(3)::before{content:"3학년"}
+  .t-sequence td.mk:nth-of-type(4)::before{content:"4학년"}
+  .t-sequence td.mk:nth-of-type(5)::before{content:"5학년"}
+  .t-sequence td.mk:nth-of-type(6)::before{content:"6학년"}
+  .t-sequence td.mk:empty::after{content:"·";font-size:18px;line-height:1;color:#C9C3B6}
+  .t-sequence .mark{font-size:19px}
+  .t-sequence tbody tr:hover td,.t-sequence tbody tr:hover th.subtopic{background:transparent}
+
+  /* ---------- 04 내용체계표: category band + 3 labelled blocks ---------- */
+  .t-framework{min-width:0}
+  .t-framework,.t-framework tbody,.t-framework tr,.t-framework th,.t-framework td{display:block;width:auto}
+  .t-framework colgroup,.t-framework thead{display:none}
+  .t-framework tbody tr+tr{border-top:1px solid var(--line)}
+  .t-framework tbody tr>*{border-bottom:1px solid var(--line-2)}
+  .t-framework tbody tr>td:last-child{border-bottom:0}
+  .t-framework th.cat{text-align:left;padding:9px 14px;font-size:15px;border-right:0}
+  .t-framework th.cat br{display:none}
+  .t-framework td{width:auto;border-left:0;padding:10px 14px 12px}
+  .t-framework td::before{display:inline-block;margin-bottom:6px;padding:1px 9px;border-radius:999px;font-size:12.5px;font-weight:800}
+  .t-framework td:nth-of-type(1)::before{content:"경제";color:var(--eco);background:var(--eco-bg)}
+  .t-framework td:nth-of-type(2)::before{content:"금융";color:var(--fin);background:var(--fin-bg)}
+  .t-framework td:nth-of-type(3)::before{content:"노동";color:var(--lab);background:var(--lab-bg)}
+}
+/* very narrow phones */
+@media screen and (max-width:380px){
+  .wrap{padding-left:12px;padding-right:12px}
+  .tabs-inner{padding-left:4px;padding-right:4px}
+  .tab{padding:6px 8px;font-size:13px}
+  .title .t1{font-size:19.5px}
+  .title .t2,.title .t3{font-size:13.5px}
+  .page-head h1,.hero-title{font-size:23px}
+  .t-sequence td.mk::before{font-size:10.5px}
 }
 @media print{
   body{background:#fff}
   .site-header{position:static;background:#fff;color:var(--ink)}
-  .title{color:var(--ink)}
-  .eyebrow{color:var(--ink-2)}
+  .title .t2,.title .t3,.eyebrow{color:var(--ink-2)}
   .tabs,.jump,.site-footer{display:none}
   .table-box{overflow:visible;border-color:#bbb}
   .block{break-inside:avoid}
