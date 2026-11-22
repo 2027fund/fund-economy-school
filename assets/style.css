@@ -14,7 +14,7 @@
   --radius:14px;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:220px;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--paper);color:var(--ink);
   font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;
   font-size:16px;line-height:1.6;word-break:keep-all;overflow-wrap:break-word}
@@ -22,11 +22,12 @@ a{color:inherit}
 .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
 
 /* header */
-.site-header{background:var(--ink);color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 2px 0 rgba(0,0,0,.04)}
-.header-top{padding:22px 20px 18px}
+.site-header{display:contents}
+.header-top{max-width:none;background:var(--ink);color:#fff;
+  padding:26px max(20px,calc((100% - 1140px) / 2)) 24px}
 .brand{display:block;text-decoration:none}
 .eyebrow{display:inline-block;font-size:12.5px;font-weight:600;letter-spacing:.08em;color:#C7D0DE;margin-bottom:6px}
-.title{display:block;font-size:clamp(19px,1.1rem + .9vw,27px);font-weight:800;line-height:1.38;letter-spacing:-.015em;color:#fff;text-wrap:balance}
+.title{display:block;font-size:clamp(22px,1rem + 2vw,32px);font-weight:800;line-height:1.32;letter-spacing:-.015em;color:#fff;text-wrap:balance}
 .title .hl{font-style:normal}
 .title .nw{white-space:nowrap}
 .title .hl.eco{color:#8DBEF5}
@@ -34,7 +35,7 @@ a{color:inherit}
 .title .hl.lab{color:#F7A867}
 .fund{color:var(--gold);font-weight:900;letter-spacing:.02em}
 
-.tabs{background:#0F1A2B;border-top:1px solid rgba(255,255,255,.08)}
+.tabs{position:sticky;top:0;z-index:10;background:#0F1A2B;border-top:1px solid rgba(255,255,255,.08);box-shadow:0 2px 8px rgba(0,0,0,.14)}
 .tabs-inner{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding-top:0;padding-bottom:0}
 .tabs-inner::-webkit-scrollbar{display:none}
 .tab{flex:0 0 auto;display:flex;align-items:center;gap:8px;min-height:52px;padding:0 16px;text-decoration:none;
@@ -122,11 +123,9 @@ td.mk{text-align:center;vertical-align:middle;border-left:1px solid var(--line-2
   background:var(--card);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:var(--radius)}
 .mark-guide-title{margin:0;font-size:15px;font-weight:800;color:var(--ink)}
 .mark-guide-list{display:flex;flex-wrap:wrap;gap:8px 10px;margin:0;padding:0;list-style:none}
-.mark-guide-list li{display:inline-flex;align-items:center;gap:8px;padding:5px 14px 5px 10px;border-radius:999px;background:#F6F4EE;font-size:15px}
-.mark-guide-list .mark{font-size:20px;color:var(--ink)}
+.mark-guide-list li{display:inline-block;line-height:1.5;padding:5px 14px 5px 10px;border-radius:999px;background:#F6F4EE;font-size:15px}
+.mark-guide-list .mark{font-size:20px;color:var(--eco);vertical-align:-2px}
 .mark-guide-list b{font-weight:700}
-.mark-mini{display:flex;flex-wrap:wrap;gap:4px 14px;margin:-4px 0 10px;font-size:13.5px;color:var(--muted)}
-.mark-mini .mark{font-size:15px;color:var(--ink-2)}
 .t-sequence tbody tr:nth-child(3n)>*{border-bottom:1px solid var(--line)}
 .t-sequence tbody tr:hover td,.t-sequence tbody tr:hover th.subtopic{background:#FBF9F4}
 
@@ -154,11 +153,10 @@ td.mk{text-align:center;vertical-align:middle;border-left:1px solid var(--line-2
 @media screen and (max-width:720px){
   html{scroll-padding-top:112px}
   body{font-size:15.5px}
-  .site-header{display:contents}
-  .header-top{background:var(--ink);color:#fff;max-width:none;padding:16px 16px 14px}
+  .header-top{padding:18px 16px 16px}
   .wrap{padding-left:16px;padding-right:16px}
   .eyebrow{font-size:12px;margin-bottom:4px}
-  .title{line-height:1.42}
+  .title{line-height:1.36}
   .mark-guide{flex-direction:column;align-items:flex-start;gap:10px;padding:12px 14px}
   .mark-guide-list li{font-size:14.5px;padding:4px 12px 4px 8px}
 
@@ -250,12 +248,11 @@ td.mk{text-align:center;vertical-align:middle;border-left:1px solid var(--line-2
 }
 @media print{
   body{background:#fff}
-  .site-header{position:static;background:#fff;color:var(--ink)}
+  .header-top{background:#fff;color:var(--ink)}
   .title{color:var(--ink)}
   .eyebrow{color:var(--ink-2)}
   .title .hl.eco{color:var(--eco)} .title .hl.fin{color:var(--fin)} .title .hl.lab{color:var(--lab)}
-  .mark-mini{display:none}
-  .tabs,.jump,.site-footer{display:none}
+    .tabs,.jump,.site-footer{display:none}
   .table-box{overflow:visible;border-color:#bbb}
   .block{break-inside:avoid}
 }
