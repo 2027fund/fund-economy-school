@@ -7,8 +7,7 @@
 | 탭 | 주소 |
 | --- | --- |
 | 학년군별 경제 성취기준 | [/standards/](https://dochon1.github.io/fund-economy-school/standards/) |
-| 학년별 내용요소 | [/elements/](https://dochon1.github.io/fund-economy-school/elements/) |
-| 경제 내용 계열성 | [/sequence/](https://dochon1.github.io/fund-economy-school/sequence/) |
+| 학년별 내용요소 및 계열성 | [/elements/](https://dochon1.github.io/fund-economy-school/elements/) |
 | 학년별 내용체계표 | [/framework/](https://dochon1.github.io/fund-economy-school/framework/) |
 | 교수·학습 자료 패키지 | [/lesson3/](https://dochon1.github.io/fund-economy-school/lesson3/) |
 | 2학년 노동 프로젝트 | [/grade2-labor/](https://dochon1.github.io/fund-economy-school/grade2-labor/) |
